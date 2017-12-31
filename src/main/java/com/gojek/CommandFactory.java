@@ -10,7 +10,8 @@ public class CommandFactory {
         this.parkingLotService = parkingLotService;
     }
 
-    public Command getCommand(String commandName, String[] args) {
+    public Command getCommand(String[] args) {
+        String commandName = args[0];
         switch (commandName) {
             case "create_parking_lot":
                 command = new CreateSlotCommand(parkingLotService, args);
