@@ -4,7 +4,7 @@ import com.gojek.command.Command;
 
 import java.io.*;
 
-public class InputParser {
+public class ParkingLotApplication {
 
     public static CommandFactory commandFactory = null;
     public static void main(String[] args) {
@@ -38,7 +38,7 @@ public class InputParser {
                 parseFileInput(args[0]);
                 break;
             default:
-                System.out.println("Invalid input. Usage: java -jar <jar_file_path> <input_file_path>");
+                System.out.println(" Invalid input. Format :: java -jar <jar_file_path> <input_file_path> ");
         }
 
     }

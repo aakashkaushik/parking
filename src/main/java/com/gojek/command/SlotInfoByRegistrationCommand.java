@@ -3,11 +3,11 @@ package com.gojek.command;
 import com.gojek.ParkingLotService;
 import com.gojek.Slot;
 
-public class SlotNumberByRegistrationNumberCommand implements Command {
+public class SlotInfoByRegistrationCommand implements Command {
     private ParkingLotService parkingLotService;
     private String registrationNumber;
 
-    public SlotNumberByRegistrationNumberCommand(ParkingLotService parkingLotService, String[] args) {
+    public SlotInfoByRegistrationCommand(ParkingLotService parkingLotService, String[] args) {
         this.parkingLotService = parkingLotService;
         this.registrationNumber = args[1];
     }

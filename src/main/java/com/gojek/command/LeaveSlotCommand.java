@@ -2,11 +2,11 @@ package com.gojek.command;
 
 import com.gojek.ParkingLotService;
 
-public class LeaveCommand implements Command {
+public class LeaveSlotCommand implements Command {
     private ParkingLotService parkingLotService;
     private int slotNumber;
 
-    public LeaveCommand(ParkingLotService parkingLotService, String[] args) {
+    public LeaveSlotCommand(ParkingLotService parkingLotService, String[] args) {
         this.parkingLotService = parkingLotService;
         this.slotNumber = Integer.valueOf(args[1]);
     }

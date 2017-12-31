@@ -20,7 +20,7 @@ public class CommandFactory {
                 command = new ParkVehicleCommand(parkingLotService, args);
                 break;
             case "leave":
-                command = new LeaveCommand(parkingLotService, args);
+                command = new LeaveSlotCommand(parkingLotService, args);
                 break;
             case "status":
                 command = new StatusCommand(parkingLotService, args);
@@ -29,10 +29,10 @@ public class CommandFactory {
                 command = new VehicleInfoByColorCommand(parkingLotService, args);
                 break;
             case "slot_numbers_for_cars_with_colour":
-                command = new SlotNumberByVehicleColorCommand(parkingLotService, args);
+                command = new SlotInfoByColorCommand(parkingLotService, args);
                 break;
             case "slot_number_for_registration_number":
-                command = new SlotNumberByRegistrationNumberCommand(parkingLotService, args);
+                command = new SlotInfoByRegistrationCommand(parkingLotService, args);
                 break;
         }
         return command;

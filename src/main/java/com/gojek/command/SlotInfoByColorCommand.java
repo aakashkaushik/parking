@@ -5,17 +5,17 @@ import com.gojek.Slot;
 
 import java.util.List;
 
-public class SlotNumberByVehicleColorCommand implements Command {
+public class SlotInfoByColorCommand implements Command {
     private ParkingLotService parkingLotService;
-    private String vehileColor;
+    private String vehicleColor;
 
-    public SlotNumberByVehicleColorCommand(ParkingLotService parkingLotService, String[] args) {
+    public SlotInfoByColorCommand(ParkingLotService parkingLotService, String[] args) {
         this.parkingLotService = parkingLotService;
-        this.vehileColor = args[1];
+        this.vehicleColor = args[1];
     }
 
     public Object execute() {
-        List<Slot> slots = parkingLotService.getSlotsByVehicleColor(vehileColor);
+        List<Slot> slots = parkingLotService.getSlotsByVehicleColor(vehicleColor);
         if (slots.isEmpty())
             return "Not Found";
         return slots;

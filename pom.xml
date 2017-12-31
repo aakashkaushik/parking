@@ -25,7 +25,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>com.gojek.CommandInvoker</mainClass>
+                            <mainClass>com.gojek.ParkingLotApplication</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
