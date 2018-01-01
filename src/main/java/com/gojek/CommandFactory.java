@@ -11,27 +11,27 @@ public class CommandFactory {
     }
 
     public Command getCommand(String[] args) {
-        String commandName = args[0];
+        CommandName commandName = CommandName.valueOf(args[0].toUpperCase());
         switch (commandName) {
-            case "create_parking_lot":
+            case CREATE_PARKING_LOT:
                 command = new CreateSlotCommand(parkingLotService, args);
                 break;
-            case "park":
+            case PARK:
                 command = new ParkVehicleCommand(parkingLotService, args);
                 break;
-            case "leave":
+            case LEAVE:
                 command = new LeaveSlotCommand(parkingLotService, args);
                 break;
-            case "status":
+            case STATUS:
                 command = new StatusCommand(parkingLotService, args);
                 break;
-            case "registration_numbers_for_cars_with_colour":
+            case REGISTRATION_NUMBERS_FOR_CARS_WITH_COLOUR:
                 command = new VehicleInfoByColorCommand(parkingLotService, args);
                 break;
-            case "slot_numbers_for_cars_with_colour":
+            case SLOT_NUMBERS_FOR_CARS_WITH_COLOUR:
                 command = new SlotInfoByColorCommand(parkingLotService, args);
                 break;
-            case "slot_number_for_registration_number":
+            case SLOT_NUMBER_FOR_REGISTRATION_NUMBER:
                 command = new SlotInfoByRegistrationCommand(parkingLotService, args);
                 break;
         }
