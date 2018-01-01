@@ -2,7 +2,10 @@
 Please run the parking application using the below script at the located at the source of project:
 ./parking_lot
 
-Choose option:\n1. Read Input from file\n2. Interactive Mode\n
+Choose option:
+1. Read Input from file
+2. Interactive Mode\n
+
 
 For file reading :
 Press 1
