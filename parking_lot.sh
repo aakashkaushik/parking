@@ -14,7 +14,9 @@ else
 	mvn -U clean install
 fi
 
-echo "Choose option:\n1. Read Input from file\n2. Interactive Mode\n"
+echo "Choose option:"
+echo "1. Read Input from file"
+echo "2. Interactive Mode\n"
 
 read reply
 if [ "$reply" -eq 1 ]; then
